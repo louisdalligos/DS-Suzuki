@@ -118,6 +118,11 @@ add_action( 'widgets_init', 'ds_suzuki_widgets_init' );
  */
 function ds_suzuki_scripts() {
 	wp_enqueue_style( 'ds-suzuki-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+	wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
+	wp_enqueue_script( 'google-map', 'http://maps.googleapis.com/maps/api/js?sensor=false');
 
 	wp_enqueue_script( 'ds-suzuki-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

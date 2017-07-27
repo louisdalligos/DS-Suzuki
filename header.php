@@ -22,35 +22,48 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ds-suzuki' ); ?></a>
+	<header class="suzuki1_header navbar navbar-static-top">
+		<div class="container">
+			<div class="navbar-header" id="suzuki1_navbar-header">
+				<button class="navbar-toggle collapsed" data-target="#suzuki1_navbar" data-toggle="collapse" type="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="suzuki1_menu-toggle">
+						<span class="suzuki1_menu-toggle-label">Menu</span>
+						<i class="fa fa-bars"></i>
+					</span>
+				</button>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+				<!-- Logo -->
+				<div class="pull-left">
+					<?php the_custom_logo(); ?>
+				</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+				<!-- Franchise Information (Desktop view)-->
+				<div class="suzuki1_franchise-info row pull-right visible-sm visible-md visible-lg">
+					<div class="suzuki1_franchise-name-box">
+						<h1 class="suzuki1_franchise-name text-uppercase text-right">Franchise Name Here</h1>
+					</div>
+					<div class="suzuki1_franchise-contact-box">
+						<address class="text-uppercase text-right hidden-sm">
+							18 Something Street Milton
+						</address>
+						<p class="suzuki1_franchise-contact-number text-uppercase text-right">Call 1800 00 000</p>
+					</div>
+				</div>
+			</div>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ds-suzuki' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<!-- Navbar -->
+			<nav class="collapse navbar-collapse" id="suzuki1_navbar">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'container'      => 'ul',
+						'container_class' => 'nav navbar-nav'
+					) );
+				?>
+			</nav>
+		</div>
+	</header>
 
 	<div id="content" class="site-content">

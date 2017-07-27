@@ -1,895 +1,821 @@
 /*
 Theme Name: ds-suzuki
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme URI: http://github.com/louisdalligos
+Author: Louis Dalligos
+Author URI: http://github.com/louisdalligos
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: ds-suzuki
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-ds-suzuki is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+@font-face {
+    font-family:"SuzukiPro-Bold";
+    src:url(../fonts/suzukifont/suzukiprobold-webfont.eot);
+    src:url(../fonts/suzukifont/suzukiprobold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiprobold-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiprobold-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiprobold-webfont.svg) format("svg");
+    font-weight:400;
+    font-style:normal
 }
 
+@font-face {
+    font-family:"SuzukiPro-Headline";
+    src:url(../fonts/suzukifont/suzukiproheadline-webfont.eot);
+    src:url(../fonts/suzukifont/suzukiproheadline-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiproheadline-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiproheadline-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiproheadline-webfont.svg) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face {
+    font-family:"SuzukiPro-Regular";
+    src:url(../fonts/suzukifont/suzukiproregular-webfont.eot);
+    src:url(../fonts/suzukifont/suzukiproregular-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiproregular-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiproregular-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiproregular-webfont.svg) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+/* Typography */
 body {
-	margin: 0;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden],
-template {
-	display: none;
-}
-
-a {
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
-b,
-strong {
-	font-weight: bold;
-}
-
-dfn {
-	font-style: italic;
+    font-family:"SuzukiPro-Regular",Arial,serif
 }
 
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+    font-size:32px
 }
 
-mark {
-	background: #ff0;
-	color: #000;
+p,address,span,input,textarea {
+    font-size:16px
 }
 
-small {
-	font-size: 80%;
+a:hover,a:focus,a:active,a:visited {
+    color:#002c48;
+    text-decoration:none
 }
 
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+.suzuki1_widget-title {
+    font-family:"SuzukiPro-Headline";
+    font-size:20px;
+    text-transform:uppercase;
+    color:#003145
 }
 
-sup {
-	top: -0.5em;
+/* Utility classes */
+.centered-img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto
 }
 
-sub {
-	bottom: -0.25em;
+.highlight {
+    color:#d52b1e;
+    font-weight:700
 }
 
-img {
-	border: 0;
+.font-l {
+    font-size:22px
 }
 
-svg:not(:root) {
-	overflow: hidden;
+/* Global styles */
+.suzuki1_sidebar .panel {
+    padding:25px
 }
 
-figure {
-	margin: 1em 40px;
+.suzuki1_sidebar .panel,.suzuki1_sidebar .panel-heading {
+    border-radius:0;
+    border:none
 }
 
-hr {
-	box-sizing: content-box;
-	height: 0;
+.suzuki1_form,.suzuki1_form .form-control,.suzuki1_form .btn {
+    font-family:"SuzukiPro-Regular";
+    font-size:16px;
+    text-transform:uppercase;
+    border:0;
+    border-radius:0;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    cursor:pointer
 }
 
-pre {
-	overflow: auto;
+.suzuki1_form .select-form-control {
+    background:#fff url(../img/dropdown.png) no-repeat 99% 3px
 }
 
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
+.suzuki1_form .btn {
+    font-family:"SuzukiPro-Headline";
+    text-align:left;
+    border:none;
+    border-radius:0
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
+.suzuki1_book-service .form-group,.suzuki1_contact-us .form-group {
+    float:left;
+    width:50%
 }
 
-button {
-	overflow: visible;
+/* Header */
+#suzuki1_navbar .nav li a {
+    font-family:"SuzukiPro-Headline",arial,serif;
+    text-transform:uppercase;
+    color:#04264a;
+    font-size:16px
 }
 
-button,
-select {
-	text-transform: none;
+.suzuki1_franchise-name,.suzuki1_franchise-info address,.suzuki1_franchise-info .suzuki1_franchise-contact-number {
+    font-family:"SuzukiPro-Headline",arial,serif
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
+.suzuki1_franchise-name {
+    color:#003145
 }
 
-button[disabled],
-html input[disabled] {
-	cursor: default;
+.suzuki1_franchise-info address,.suzuki1_franchise-info .suzuki1_franchise-contact-number {
+    color:#d52b1e;
+    margin-bottom:0;
+    line-height:14px
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+.suzuki1_franchise-contact-number {
+    font-size:28px
 }
 
-input {
-	line-height: normal;
+/* Nav */
+.navbar {
+    margin:0;
+    border:0!important
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
+.navbar-toggle {
+    background-color:#ffd022;
+    border-radius:0!important;
+    padding:0;
+    margin:0;
+    height:116px
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
+.suzuki1_menu-toggle {
+    font-family:"SuzukiPro-Headline";
+    text-transform:uppercase;
+    font-size:24px;
+    padding:0 25px
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+.suzuki1_menu-toggle-label {
+    padding-right:20px
 }
 
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
+.nav > li > a {
+    padding:10px
 }
 
-legend {
-	border: 0;
-	padding: 0;
+#suzuki1_navbar .navbar-nav >.active > a,#suzuki1_navbar .navbar-nav >.active > a:focus,#suzuki1_navbar .navbar-nav >.active > a:hover {
+    color:#d52b1e;
+    background:none
 }
 
-textarea {
-	overflow: auto;
+#suzuki1_navbar .navbar-nav > li > a:focus,#suzuki1_navbar .navbar-nav > l i> a:hover {
+    color:#d52b1e
 }
 
-optgroup {
-	font-weight: bold;
+/* Carousel */
+#suzuki1_car-gallery {
+    padding-top:30px
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.carousel-indicators {
+    bottom:5px
 }
 
-td,
-th {
-	padding: 0;
+#suzuki1_carousel .carousel-indicators .active {
+    background-color:#e31a15
 }
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+.carousel-indicators li {
+    background:#FFF;
+    border:none;
+    width:12px;
+    height:12px;
+    margin:0 3px;
+    -webkit-box-shadow:inset 1px 2px 11px -4px rgba(0,0,0,0.64);
+    -moz-box-shadow:inset 1px 2px 11px -4px rgba(0,0,0,0.64);
+    box-shadow:inset 1px 2px 11px -4px rgba(0,0,0,0.64)
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
+.carousel-indicators .active {
+    margin:0 3px
 }
 
-p {
-	margin-bottom: 1.5em;
+/* CTA */
+.suzuki1_cta-wrap {
+    padding-top:30px
 }
 
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
+.cta a {
+    color:#FFF;
+    text-transform:uppercase;
+    font-family:"SuzukiPro-Headline";
+    display:block;
+    position:relative
 }
 
-blockquote {
-	margin: 0 1.5em;
+.cta span {
+    display:block;
+    width:50%;
+    line-height:14px;
+    padding:10px 0 0 10px
 }
 
-address {
-	margin: 0 0 1.5em;
+.cta i {
+    float:right;
+    position:absolute;
+    right:10px;
+    bottom:10px
 }
 
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+.cta a:hover {
+    text-decoration:none
 }
 
-code,
-kbd,
-tt,
-var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+.suzuki1_cta-1 {
+    background-color:#fbbf00
 }
 
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
+.suzuki1_cta-2 {
+    background-color:#d52b1e
 }
 
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
+.suzuki1_cta-3 {
+    background-color:#004f9e
 }
 
-big {
-	font-size: 125%;
+.suzuki1_cta-4 {
+    background-color:#8ecb01
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-html {
-	box-sizing: border-box;
+/* Quick Search Form */
+.suzuki1_sidebar .suzuki1_quicksearch.panel,.suzuki1_sidebar .suzuki1_quicksearch .panel-heading {
+    background-color:#003145
 }
 
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+.suzuki1_sidebar .panel-heading {
+    padding:0
 }
 
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+.suzuki1_sidebar .panel-title {
+    font-family:"SuzukiPro-Headline";
+    text-transform:uppercase;
+    color:#ffd022;
+    font-size:20px
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
+.suzuki1_advanced-search-link,.suzuki1_quicksearch .btn {
+    width:50%
 }
 
-blockquote,
-q {
-	quotes: "" "";
+.suzuki1_advanced-search-link {
+    font-size:14px;
+    margin-top:10px;
+    float:left;
+    color:#ffd022
 }
 
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+.suzuki1_advanced-search-link:hover,.suzuki1_advanced-search-link:visited,.suzuki1_advanced-search-link:active {
+    color:#ffd022
 }
 
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
+.suzuki1_quicksearch .panel-body {
+    padding:15px 15px 0
 }
 
-ul {
-	list-style: disc;
+/*form slider classes */
+.suzuki1_form .suzuki1-slider {
+    margin-top:-10px;
+    margin-bottom:-15px
 }
 
-ol {
-	list-style: decimal;
+.suzuki1_form .suzuki1-slider .ui-slider {
+    height:28px;
+    border-radius:0;
+    border:none
 }
 
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+.suzuki1_form .suzuki1-slider .ui-slider-handle {
+    height:36px;
+    z-index:100
 }
 
-dt {
-	font-weight: bold;
+.suzuki1_form .suzuki1-slider .ui-slider .ui-slider-handle {
+    background:url(../img/slider-right.png) no-repeat;
+    border:none;
+    outline:none;
+    border-radius:0;
+    margin-top:5px;
+    width:40px;
+    height:36px
 }
 
-dd {
-	margin: 0 1.5em 1.5em;
+.suzuki1_form .suzuki1-slider .ui-slider .ui-slider-handle:first-of-type {
+    background:url(../img/slider-left.png) no-repeat
 }
 
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+.suzuki1_form .suzuki1-slider .ui-slider-range {
+    background:#FFF;
+    border:1px solid #011e2a;
+    border-radius:0
 }
 
-figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+.value-wrap {
+    position:relative;
+    top:-28px;
+    background-color:#012533;
+    -webkit-box-shadow:inset 1px 1px 30px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 1px 1px 30px -6px rgba(0,0,0,0.75);
+    box-shadow:inset 1px 1px 30px -6px rgba(0,0,0,0.75)
 }
 
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
+.value-wrap input {
+    background:transparent;
+    position:relative;
+    border:0;
+    color:#fff;
+    padding:0 10px;
+    width:50%;
+    height:28px
 }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
+#amount-max {
+    text-align:right
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+#year-range {
+    margin-top:10px
 }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
+#qs_submit {
+    background:#ffd022 url(../img/search-go.png) no-repeat 98% 3px
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
+/* Car Gallery */
+.owl-wrapper-outer .suzuki1_car-image {
+    background:rgba(242,247,251,1);
+    background:-moz-linear-gradient(top,rgba(242,247,251,1) 0%,rgba(241,246,249,1) 100%);
+    background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(242,247,251,1)),color-stop(100%,rgba(241,246,249,1)));
+    background:-webkit-linear-gradient(top,rgba(242,247,251,1) 0%,rgba(241,246,249,1) 100%);
+    background:-o-linear-gradient(top,rgba(242,247,251,1) 0%,rgba(241,246,249,1) 100%);
+    background:-ms-linear-gradient(top,rgba(242,247,251,1) 0%,rgba(241,246,249,1) 100%);
+    background:linear-gradient(to bottom,rgba(242,247,251,1) 0%,rgba(241,246,249,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f7fb',endColorstr='#f1f6f9',GradientType=0)
 }
 
-select {
-	border: 1px solid #ccc;
+.suzuki1_car-logo {
+    margin-top:10px
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: #111;
+.customNavigation {
+    position:relative;
+    top:-116px
 }
 
-textarea {
-	width: 100%;
+.customNavigation .next {
+    float:right
 }
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-	color: royalblue;
+/* Dealer About Info */
+.suzuki1_dealer_about {
+    padding-bottom:35px
 }
 
-a:visited {
-	color: purple;
+/* Dealer Location Map */
+.suzuki1_dealer-location-map {
+    background-color:#eaedee;
+    padding-top:20px
 }
 
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+.gmap3 {
+    width:100%;
+    height:230px
 }
 
-a:focus {
-	outline: thin dotted;
+.suzuki1_direction-button {
+    display:block;
+    width:100%;
+    color:#FFF;
+    font-size:20px;
+    text-align:center;
+    padding:11px 0;
+    background:rgba(20,72,98,1);
+    background:-moz-linear-gradient(top,rgba(20,72,98,1) 0%,rgba(11,58,83,1) 47%,rgba(1,45,67,1) 100%);
+    background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(20,72,98,1)),color-stop(47%,rgba(11,58,83,1)),color-stop(100%,rgba(1,45,67,1)));
+    background:-webkit-linear-gradient(top,rgba(20,72,98,1) 0%,rgba(11,58,83,1) 47%,rgba(1,45,67,1) 100%);
+    background:-o-linear-gradient(top,rgba(20,72,98,1) 0%,rgba(11,58,83,1) 47%,rgba(1,45,67,1) 100%);
+    background:-ms-linear-gradient(top,rgba(20,72,98,1) 0%,rgba(11,58,83,1) 47%,rgba(1,45,67,1) 100%);
+    background:linear-gradient(to bottom,rgba(20,72,98,1) 0%,rgba(11,58,83,1) 47%,rgba(1,45,67,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#144862',endColorstr='#012d43',GradientType=0)
 }
 
-a:hover,
-a:active {
-	outline: 0;
+.suzuki1_direction-button:hover,.suzuki1_direction-button:visited,.suzuki1_direction-button:active {
+    color:#FFF;
+    text-decoration:none
 }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+/* Footer */
+.suzuki1_footer {
+    background:rgba(236,238,239,1);
+    background:-moz-linear-gradient(top,rgba(236,238,239,1) 0%,rgba(243,245,245,1) 47%,rgba(252,252,252,1) 100%);
+    background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(236,238,239,1)),color-stop(47%,rgba(243,245,245,1)),color-stop(100%,rgba(252,252,252,1)));
+    background:-webkit-linear-gradient(top,rgba(236,238,239,1) 0%,rgba(243,245,245,1) 47%,rgba(252,252,252,1) 100%);
+    background:-o-linear-gradient(top,rgba(236,238,239,1) 0%,rgba(243,245,245,1) 47%,rgba(252,252,252,1) 100%);
+    background:-ms-linear-gradient(top,rgba(236,238,239,1) 0%,rgba(243,245,245,1) 47%,rgba(252,252,252,1) 100%);
+    background:linear-gradient(to bottom,rgba(236,238,239,1) 0%,rgba(243,245,245,1) 47%,rgba(252,252,252,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eceeef',endColorstr='#fcfcfc',GradientType=0)
 }
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+.suzuki1_footer {
+    padding:30px 0 0;
+    font-size:16px;
+    text-transform:uppercase
 }
 
-.main-navigation li {
-	float: left;
-	position: relative;
+.suzuki1_footer address,.suzuki1_footer span {
+    margin-bottom:0;
+    line-height:26px
 }
 
-.main-navigation a {
-	display: block;
-	text-decoration: none;
+.suzuki1_widget {
+    padding-bottom:30px
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
+.suzuki1_widget,.suzuki1_footer li,.suzuki1_footer li > a,.suzuki1_footer p,.suzuki1_footer-below a {
+    color:#737373
 }
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+.suzuki1_footer ul {
+    margin:0;
+    padding:0;
+    line-height:26px
 }
 
-.main-navigation ul ul a {
-	width: 200px;
+.suzuki1_footer ul > li {
+    list-style:none
 }
 
-.main-navigation ul ul li {
+.suzuki1_footer-up .suzuki1_widget-title {
+    display:block;
+    margin-bottom:5px
+}
+
+.suzuki1_footer-up .suzuki1_widget-title:hover,.suzuki1_footer-up .suzuki1_widget-title:active,.suzuki1_footer-up .suzuki1_widget-title:visited,.suzuki1_footer-up .suzuki1_widget-title:link {
+    text-decoration:none;
+    color:#04264a
+}
+
+#suzuki1_contact-wrap {
+    line-height:26px
+}
+
+#suzuki1_contact-wrap span {
+    display:block
+}
+
+.suzuki1_footer-below {
+    text-transform:uppercase;
+    border-top:2px solid #ebebeb;
+    padding:30px 0;
+    background:rgba(252,252,252,1);
+    background:-moz-linear-gradient(top,rgba(252,252,252,1) 0%,rgba(254,254,254,1) 47%,rgba(255,255,255,1) 100%);
+    background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(252,252,252,1)),color-stop(47%,rgba(254,254,254,1)),color-stop(100%,rgba(255,255,255,1)));
+    background:-webkit-linear-gradient(top,rgba(252,252,252,1) 0%,rgba(254,254,254,1) 47%,rgba(255,255,255,1) 100%);
+    background:-o-linear-gradient(top,rgba(252,252,252,1) 0%,rgba(254,254,254,1) 47%,rgba(255,255,255,1) 100%);
+    background:-ms-linear-gradient(top,rgba(252,252,252,1) 0%,rgba(254,254,254,1) 47%,rgba(255,255,255,1) 100%);
+    background:linear-gradient(to bottom,rgba(252,252,252,1) 0%,rgba(254,254,254,1) 47%,rgba(255,255,255,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#ffffff',GradientType=0)
+}
+
+.suzuki1_footer-below .list-inline > li:first-child {
+    padding-left:0!important
+}
+
+.suzuki1_footer-logo,.suzuki1_developer-website {
+    margin-left:30px
+}
+
+.suzuki1_footer-up .suzuki1_widget-title i {
+    float:right
+}
+
+.col {
+    float:left
+}
+
+.suzuki1_copyright {
+    margin:0
+}
+
+/* Inner Pages */
+.suzuki1_inner-pages .suzuki1_widget-title {
+    margin-top:30px
+}
+
+.suzuki1_sidebar .suzuki1_book-service.panel,.suzuki1_sidebar .suzuki1_book-service .panel-heading {
+    background-color:#ffd022
+}
+
+.suzuki1_sidebar .suzuki1_contact-us.panel,.suzuki1_sidebar .suzuki1_contact-us .panel-heading {
+    background-color:#8ecb01
+}
+
+.suzuki1_sidebar .suzuki1_book-service .panel-heading .panel-title,.suzuki1_sidebar .suzuki1_contact-us .panel-heading .panel-title {
+    color:#003145
+}
+
+.suzuki1_side-menu {
+    padding-top:30px
+}
+
+.suzuki1_side-menu .list-group-item.active,.suzuki1_side-menu .list-group-item.active:hover,.suzuki1_side-menu .list-group-item.active:focus {
+    color:#d52b1e;
+    border-color:transparent;
+    background:none
+}
+
+.suzuki1_side-menu .list-group-item,.suzuki1_side-menu .list-group-item:hover,.suzuki1_side-menu .list-group-item:focus {
+    background:none
+}
+
+.suzuki1_side-menu .list-group-item {
+    border:none;
+    padding:10px 0;
+    border-top:1px solid #DDD;
+    font-size:16px;
+    color:#333
+}
+
+.suzuki1_contact-us .submit-group {
+    margin-bottom:-10px
+}
+
+.form-textarea {
+    margin-left:-15px;
+    margin-right:-15px;
+    margin-bottom:15px
+}
+
+#bs_submit,#contact_submit {
+    background:#003145 url(../img/search-go.png) no-repeat 98% 3px;
+    color:#FFF
+}
+
+/* tablet landscape & Desktop */
+@media (min-width: 992px) {
+.suzuki1_franchise-info {
+    margin-right:-15px;
+    margin-top:5px
+}
 
+.suzuki1_franchise-contact-number {
+    font-size:14px
 }
 
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
+.navbar-header {
+    width:100%
 }
 
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
+.navbar-nav {
+    margin:-40px 0 0 248px
 }
 
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
+.suzuki1_franchise-name-box,.suzuki1_franchise-contact-box {
+    float:left;
+    position:relative;
+    min-height:1px
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
+.suzuki1_franchise-name-box {
+    width:100%;
+    left:0;
+    padding-right:15px
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
+.suzuki1_franchise-contact-box {
+    width:100%;
+    right:70%;
+    top:-42px
 }
 
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.cta {
+    min-height:120px
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.cta span {
+    width:100%;
+    padding:5px 0 0 5px
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+.suzuki1_cta-1-wrap {
+    background:url(../img/cta_test_drive.jpg) no-repeat
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+.suzuki1_cta-2-wrap {
+    background:url(../img/cta_request_brochure.jpg) no-repeat
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+.suzuki1_cta-3-wrap {
+    background:url(../img/cta_service_booking.jpg) no-repeat
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+.suzuki1_cta-4-wrap {
+    background:url(../img/cta_finance_insurance.jpg) no-repeat
 }
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+.suzuki1_cta-btn {
+    position:absolute!important;
+    left:15px;
+    bottom:0;
+    border-top:1px solid #FFF;
+    border-right:1px solid #FFF
 }
 
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+.cta_placeholder {
+    position:absolute;
+    right:15px;
+    top:0;
+    border-left:1px solid#FFF;
+    border-bottom:1px solid#FFF
 }
+}
 
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-	outline: 0;
+/* large screen */
+@media (min-width: 1200px) {
+.cta {
+    min-height:150px
+}
 }
 
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+@media (min-width: 767px) and (max-width: 992px) {
+.customNavigation {
+    top:-116px
 }
 
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+.suzuki1_dealer_about .suzuki1_widget-title {
+    margin:0 0 10px
 }
 
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.suzuki1_footer-below {
+    padding:40px 0 10px
 }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
+.suzuki1_franchise-info {
+    margin:7px 15px 0 0
 }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
+.suzuki1_menu-toggle-label {
+    display:none
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
+.suzuki1_menu-toggle {
+    padding:0 35px
 }
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
+.col-right {
+    float:right;
+    position:relative;
+    top:-20px
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-	display: block;
+.col-right .col {
+    float:none;
+    text-align:right
 }
 
-.hentry {
-	margin: 0 0 1.5em;
+.suzuki1_cta-wrap {
+    margin-left:0;
+    margin-right:0
 }
 
-.updated:not(.published) {
-	display: none;
+.cta span {
+    width:55%
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.suzuki1_cta-1,.suzuki1_cta-2,.suzuki1_cta-3 {
+    border-right:2px solid #FFF
 }
+}
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+@media (max-width: 400px) {
+.suzuki1_menu-toggle-label {
+    display:none
+}
 }
 
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
+@media (max-width: 767px) {
+.navbar-header {
+    background-color:#ffd022
 }
 
-.bypostauthor {
-	display: block;
+.suzuki1_franchise-contact-number {
+    padding-bottom:20px
 }
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+.suzuki1_franchise-info {
+    background:-moz-linear-gradient(top,rgba(241,241,241,1) 0%,rgba(255,255,255,0) 100%);
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(241,241,241,1)),color-stop(100%,rgba(255,255,255,0)));
+    background:-webkit-linear-gradient(top,rgba(241,241,241,1) 0%,rgba(255,255,255,0) 100%);
+    background:-o-linear-gradient(top,rgba(241,241,241,1) 0%,rgba(255,255,255,0) 100%);
+    background:-ms-linear-gradient(top,rgba(241,241,241,1) 0%,rgba(255,255,255,0) 100%);
+    background:linear-gradient(to bottom,rgba(241,241,241,1) 0%,rgba(255,255,255,0) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1',endColorstr='#00ffffff',GradientType=0)
 }
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
+.suzuki1_sidebar {
+    padding:0
 }
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+.suzuki1_widget {
+    border-bottom:1px solid#e1e1e1;
+    padding:20px 0 10px
 }
 
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
+.suzuki1_contact-wrap {
+    padding-top:0
 }
 
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
+.suzuki1_vehicles-wrap {
+    border-bottom:1px transparent
 }
 
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+.suzuki1_footer-below {
+    padding:20px 0 40px
 }
 
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.suzuki1_footer {
+    text-align:center
 }
 
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+.col,.col-right {
+    float:none!important
 }
 
-.wp-caption-text {
-	text-align: center;
+.col-right {
+    position:relative;
+    top:-10px
 }
 
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-	margin-bottom: 1.5em;
+.suzuki1_footer-logo,.suzuki1_developer-website {
+    margin-left:0
 }
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+.suzuki1_footer-logo {
+    position:relative;
+    top:80px
 }
 
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
+.suzuki1_cta-1 {
+    border-right:1px solid #FFF;
+    border-bottom:1px solid #FFF
 }
 
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33333%;
+.suzuki1_cta-2 {
+    border-left:1px solid #FFF;
+    border-bottom:1px solid #FFF
 }
 
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
+.suzuki1_cta-3 {
+    border-right:1px solid #FFF;
+    border-top:1px solid #FFF
 }
 
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
+.suzuki1_cta-4 {
+    border-left:1px solid #FFF;
+    border-top:1px solid #FFF
 }
+}
 
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66667%;
+@media (max-width: 991px) {
+.suzuki1_cta-wrap {
+    padding-top:0;
+    margin-top:-20px
 }
 
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28571%;
+.suzuki1_cta-wrap [class^="col-"] {
+    padding-left:0;
+    padding-right:0
 }
 
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+.cta a {
+    font-size:1.6em;
+    min-height:150px
 }
 
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11111%;
+.cta span {
+    line-height:1.2em;
+    font-size: 1em;
 }
 
-.gallery-caption {
-	display: block;
+.suzuki1_side-menu {
+    text-align:center
+}
 }
