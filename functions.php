@@ -191,10 +191,21 @@ function ds_get_meta_box( $meta_boxes ) {
 				'type' => 'image_advanced',
 				'name' => esc_html__( 'Slides', 'ds-suzuki' ),
 			)
-		),
+		)
 	);
 
-
+	$meta_boxes[] = array(
+		'title'  => esc_html__( 'Page Banner', 'ds-suzuki' ),
+		'post_types' => array( 'page' ),
+		'fields' => array(
+			array(
+				'id'               => $prefix . 'page-banner-image',
+				'name'             => esc_html__( 'Image', 'ds-suzuki' ),
+				'type'             => 'image',
+				'force_delete'     => false
+			),
+		)
+	);
 
 	return $meta_boxes;
 }

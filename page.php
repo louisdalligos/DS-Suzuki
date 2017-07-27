@@ -15,7 +15,19 @@
 get_header(); ?>
 
 	<div class="suzuki1_banner-page">
-		<img alt="page banner" class="img-responsive centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner-page.jpg">
+		<?php
+			$images = rwmb_meta( 'ds-page-banner-image', 'size=FULL' );
+			//print_r($images);
+
+			if ( !empty( $images ) ) {
+				foreach ( $images as $image ) {
+						echo '<img class="img-responsive centered-img" src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
+				}
+			} else { ?>
+				<img alt="page banner" class="img-responsive centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner-page.jpg"><?php
+			}
+		?>
+
 	</div>
 
 	<section class="suzuki1_main-content-wrap">
