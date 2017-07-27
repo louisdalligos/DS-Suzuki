@@ -14,6 +14,10 @@
 
 get_header(); ?>
 
+	<div class="suzuki1_banner-page">
+		<img alt="page banner" class="img-responsive centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner-page.jpg">
+	</div>
+
 	<section class="suzuki1_main-content-wrap">
 		<div class="container suzuki1_inner-pages">
 			<div class="row"><?php
@@ -33,6 +37,12 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+	<!-- Map -->
+  <section class="suzuki1_dealer-location-map">
+  	<div class="gmap3" id="suzuki1_dealer-gmap"></div>
+    <a class="suzuki1_direction-button" href="#">Get Directions</a>
+  </section>
 
 <?php
 get_footer();
