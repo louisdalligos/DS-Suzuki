@@ -59,11 +59,21 @@
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
 						'container'      => 'ul',
-						'container_class' => 'nav navbar-nav'
+						'menu_class' => 'nav navbar-nav'
 					) );
 				?>
 			</nav>
 		</div>
 	</header>
+
+	<div class="suzuki1_franchise-info hidden-lg hidden-md hidden-sm">
+		<div class="container">
+			<h1 class="suzuki1_franchise-name text-uppercase text-right">Franchise Name Here</h1>
+
+			<div class="suzuki1_franchise-contact">
+				<p class="suzuki1_franchise-contact-number text-uppercase text-right">Call 1800 00 000</p>
+			</div>
+		</div>
+	</div><!-- Carousel -->
 
 	<div id="content" class="site-content">

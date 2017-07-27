@@ -13,24 +13,24 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 @font-face {
     font-family:"SuzukiPro-Bold";
-    src:url(../fonts/suzukifont/suzukiprobold-webfont.eot);
-    src:url(../fonts/suzukifont/suzukiprobold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiprobold-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiprobold-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiprobold-webfont.svg) format("svg");
+    src:url(fonts/suzukifont/suzukiprobold-webfont.eot);
+    src:url(fonts/suzukifont/suzukiprobold-webfont.eot#iefix) format("embedded-opentype"),url(fonts/suzukifont/suzukiprobold-webfont.woff) format("woff"),url(fonts/suzukifont/suzukiprobold-webfont.ttf) format("truetype"),url(fonts/suzukifont/suzukiprobold-webfont.svg) format("svg");
     font-weight:400;
     font-style:normal
 }
 
 @font-face {
     font-family:"SuzukiPro-Headline";
-    src:url(../fonts/suzukifont/suzukiproheadline-webfont.eot);
-    src:url(../fonts/suzukifont/suzukiproheadline-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiproheadline-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiproheadline-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiproheadline-webfont.svg) format("svg");
+    src:url(fonts/suzukifont/suzukiproheadline-webfont.eot);
+    src:url(fonts/suzukifont/suzukiproheadline-webfont.eot#iefix) format("embedded-opentype"),url(fonts/suzukifont/suzukiproheadline-webfont.woff) format("woff"),url(fonts/suzukifont/suzukiproheadline-webfont.ttf) format("truetype"),url(fonts/suzukifont/suzukiproheadline-webfont.svg) format("svg");
     font-weight:400;
     font-style:normal
 }
 
 @font-face {
     font-family:"SuzukiPro-Regular";
-    src:url(../fonts/suzukifont/suzukiproregular-webfont.eot);
-    src:url(../fonts/suzukifont/suzukiproregular-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/suzukifont/suzukiproregular-webfont.woff) format("woff"),url(../fonts/suzukifont/suzukiproregular-webfont.ttf) format("truetype"),url(../fonts/suzukifont/suzukiproregular-webfont.svg) format("svg");
+    src:url(fonts/suzukifont/suzukiproregular-webfont.eot);
+    src:url(fonts/suzukifont/suzukiproregular-webfont.eot#iefix) format("embedded-opentype"),url(fonts/suzukifont/suzukiproregular-webfont.woff) format("woff"),url(fonts/suzukifont/suzukiproregular-webfont.ttf) format("truetype"),url(fonts/suzukifont/suzukiproregular-webfont.svg) format("svg");
     font-weight:400;
     font-style:normal
 }
