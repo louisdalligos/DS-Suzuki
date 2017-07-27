@@ -12,24 +12,35 @@ get_header();
 
   <div class="carousel slide" data-ride="carousel" id="suzuki1_carousel">
 
-  	<!-- Indicators -->
-  	<ol class="carousel-indicators">
-  		<li class="active" data-slide-to="0" data-target="#suzuki1_carousel"></li>
-  		<li data-slide-to="1" data-target="#suzuki1_carousel"></li>
-  		<li data-slide-to="2" data-target="#suzuki1_carousel"></li>
-  	</ol>
+    <?php
+      $images = rwmb_meta( 'ds-banner-slider-image', 'size=FULL' );
 
-    <!-- Wrapper for slides -->
-  	<div class="carousel-inner">
-  		<div class="item active"><img alt="Banner 1" class="centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner1.jpg"></div>
-  		<div class="item"><img alt="Banner 2" class="centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner1.jpg"></div>
-  		<div class="item"><img alt="Banner 3" class="centered-img" src="<?php echo get_template_directory_uri(); ?>/img/banners/banner1.jpg"></div>
-  	</div>
-  </div>
+      //print_r($images);
+
+      if ( !empty( $images ) ) { ?>
+
+        <div class="carousel-inner"><?php
+        $count = 0;
+
+        foreach ( $images as $image ) {
+          $count++; ?>
+
+          <div class="item <?php if($count == 1){echo ' active';} ?>">
+            <img class="centered-img" src="<?php echo esc_url( $image['url'] ) ?>"  alt="<?php echo esc_attr( $image['alt'] )?>">
+          </div><!-- end item -->
+
+        <?php } ?>
+      </div><!-- end carousel inner --><?php
+      }
+    ?>
+
+  </div><!-- end carousel slide -->
 
   <section class="suzuki1_main-content-wrap">
   	<div class="container">
   		<div class="row">
+
+        <!-- search form -->
   			<div class="suzuki1_sidebar col-md-4 col-md-push-8">
   				<div class="suzuki1_quicksearch panel panel-default">
   					<div class="panel-heading">
@@ -92,11 +103,16 @@ get_header();
   					</div>
   				</div><!-- END .panel -->
   			</div>
+
   			<div class="suzuki1_cta-content col-md-8 col-md-pull-4">
   				<div class="suzuki1_cta-wrap row">
   					<div class="col-md-3 col-sm-3 col-xs-6">
   						<div class="cta suzuki1_cta-1-wrap">
-  							<div class="cta_placeholder"></div><a class="suzuki1_cta-1 suzuki1_cta-btn" href="#"><span>Take a test drive</span> <i class="fa fa-chevron-right"></i></a>
+  							<div class="cta_placeholder"></div>
+                <a class="suzuki1_cta-1 suzuki1_cta-btn" href="#">
+                  <span>Take a test drive</span>
+                  <i class="fa fa-chevron-right"></i>
+                </a>
   						</div>
   					</div>
   					<div class="col-md-3 col-sm-3 col-xs-6">
@@ -158,6 +174,7 @@ get_header();
   				</div>
   			</div>
   		</div>
+
   		<div class="suzuki1_dealer_about row">
   			<div class="col-md-4 col-sm-6 col-xs-12"><img alt="Dealer name" class="img-responsive centered-img" src="<?php echo get_template_directory_uri(); ?>/img/dealer-image.jpg"></div>
   			<div class="col-md-8 col-sm-6 col-xs-12">
@@ -166,9 +183,12 @@ get_header();
   			</div>
   		</div>
   	</div>
-  </section><!-- Map -->
+  </section>
+
+  <!-- Map -->
   <section class="suzuki1_dealer-location-map">
-  	<div class="gmap3" id="suzuki1_dealer-gmap"></div><a class="suzuki1_direction-button" href="#">Get Directions</a>
+  	<div class="gmap3" id="suzuki1_dealer-gmap"></div>
+    <a class="suzuki1_direction-button" href="#">Get Directions</a>
   </section>
 
   <div class="container">

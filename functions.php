@@ -173,24 +173,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load metabox field.
+ * Register our metaboxes.
  */
 function ds_get_meta_box( $meta_boxes ) {
-	$prefix = 'prefix-';
+	$prefix = 'ds-';
 
 	$meta_boxes[] = array(
 		'id' => 'banner-slider',
 		'title' => esc_html__( 'Banner Slider', 'ds-suzuki' ),
-		'post_types' => array( 'page', 'post' ),
+		'post_types' => array( 'page' ),
 		'context' => 'advanced',
 		'priority' => 'default',
 		'autosave' => false,
 		'fields' => array(
 			array(
-				'id' => $prefix . 'image_advanced_1',
+				'id' => $prefix . 'banner-slider-image',
 				'type' => 'image_advanced',
 				'name' => esc_html__( 'Slides', 'ds-suzuki' ),
-			),
+			)
 		),
 	);
 
@@ -199,3 +199,8 @@ function ds_get_meta_box( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'ds_get_meta_box' );
+
+/**
+ * Get field meta value
+ */
+rwmb_the_value( $field_id, $args = array(), $post_id = null, $echo = true );
