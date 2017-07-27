@@ -105,6 +105,7 @@ $(function() {
                 navigationControl: false,
                 streetViewControl: false
             }
-        }
+        },
+        key: 'AIzaSyBsAON98ndGW0tqEmULBRVhFKV3UmgjPZQ'
     });
 });

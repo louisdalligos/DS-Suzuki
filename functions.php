@@ -171,3 +171,31 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load metabox field.
+ */
+function ds_get_meta_box( $meta_boxes ) {
+	$prefix = 'prefix-';
+
+	$meta_boxes[] = array(
+		'id' => 'banner-slider',
+		'title' => esc_html__( 'Banner Slider', 'ds-suzuki' ),
+		'post_types' => array( 'page', 'post' ),
+		'context' => 'advanced',
+		'priority' => 'default',
+		'autosave' => false,
+		'fields' => array(
+			array(
+				'id' => $prefix . 'image_advanced_1',
+				'type' => 'image_advanced',
+				'name' => esc_html__( 'Slides', 'ds-suzuki' ),
+			),
+		),
+	);
+
+
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'ds_get_meta_box' );

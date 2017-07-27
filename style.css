@@ -102,7 +102,7 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 .suzuki1_form .select-form-control {
-    background:#fff url(../img/dropdown.png) no-repeat 99% 3px
+    background:#fff url(img/dropdown.png) no-repeat 99% 3px
 }
 
 .suzuki1_form .btn {
@@ -309,7 +309,7 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 .suzuki1_form .suzuki1-slider .ui-slider .ui-slider-handle {
-    background:url(../img/slider-right.png) no-repeat;
+    background:url(img/slider-right.png) no-repeat;
     border:none;
     outline:none;
     border-radius:0;
@@ -319,7 +319,7 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 .suzuki1_form .suzuki1-slider .ui-slider .ui-slider-handle:first-of-type {
-    background:url(../img/slider-left.png) no-repeat
+    background:url(img/slider-left.png) no-repeat
 }
 
 .suzuki1_form .suzuki1-slider .ui-slider-range {
@@ -356,7 +356,7 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 #qs_submit {
-    background:#ffd022 url(../img/search-go.png) no-repeat 98% 3px
+    background:#ffd022 url(img/search-go.png) no-repeat 98% 3px
 }
 
 /* Car Gallery */
@@ -565,7 +565,7 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 #bs_submit,#contact_submit {
-    background:#003145 url(../img/search-go.png) no-repeat 98% 3px;
+    background:#003145 url(img/search-go.png) no-repeat 98% 3px;
     color:#FFF
 }
 
@@ -616,19 +616,19 @@ a:hover,a:focus,a:active,a:visited {
 }
 
 .suzuki1_cta-1-wrap {
-    background:url(../img/cta_test_drive.jpg) no-repeat
+    background:url(img/cta_test_drive.jpg) no-repeat
 }
 
 .suzuki1_cta-2-wrap {
-    background:url(../img/cta_request_brochure.jpg) no-repeat
+    background:url(img/cta_request_brochure.jpg) no-repeat
 }
 
 .suzuki1_cta-3-wrap {
-    background:url(../img/cta_service_booking.jpg) no-repeat
+    background:url(img/cta_service_booking.jpg) no-repeat
 }
 
 .suzuki1_cta-4-wrap {
-    background:url(../img/cta_finance_insurance.jpg) no-repeat
+    background:url(img/cta_finance_insurance.jpg) no-repeat
 }
 
 .suzuki1_cta-btn {

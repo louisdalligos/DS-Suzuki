@@ -122,7 +122,7 @@
 					</ul>
 				</div>
 				<div class="col">
-					<a href="#"><img alt="Suzuki" class="suzuki1_footer-logo" src="img/suzuki-footer-logo.png"></a>
+					<a href="#"><img alt="Suzuki" class="suzuki1_footer-logo" src="<?php echo get_template_directory_uri(); ?>/img/suzuki-footer-logo.png"></a>
 				</div>
 				<div class="col-right pull-right">
 					<div class="col">
@@ -138,6 +138,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </body>
 </html>
