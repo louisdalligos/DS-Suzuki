@@ -11,7 +11,6 @@
 
 ?>
 
-	</div><!-- #content -->
 
 	<footer class="suzuki1_footer">
 		<div class="container">
@@ -138,6 +137,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+
 </body>
 </html>

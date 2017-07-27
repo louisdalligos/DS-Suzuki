@@ -6,10 +6,8 @@
  *
  */
 
-get_header(); ?>
+get_header();
 
-<div class="content-area">
-  <?php
   while ( have_posts() ) : the_post(); ?>
 
   <div class="carousel slide" data-ride="carousel" id="suzuki1_carousel">
@@ -179,6 +177,5 @@ get_header(); ?>
 
   <?php endwhile; // End of the loop.
   ?>
-</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -18,9 +18,11 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsAON98ndGW0tqEmULBRVhFKV3UmgjPZQ"></script>
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<header class="suzuki1_header navbar navbar-static-top">
 		<div class="container">
@@ -74,6 +76,4 @@
 				<p class="suzuki1_franchise-contact-number text-uppercase text-right">Call 1800 00 000</p>
 			</div>
 		</div>
-	</div><!-- Carousel -->
-
-	<div id="content" class="site-content">
+	</div>

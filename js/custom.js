@@ -96,7 +96,7 @@ $(function() {
         marker: {
             address: "Haltern am See, Weseler Str. 151", // Add dealer address here
             options: {
-                icon: new google.maps.MarkerImage("http://clients.cheriomedia.com/martin/suzuki/img/suzuki-gmap-pin.png")
+                icon: new google.maps.MarkerImage("https://raw.githubusercontent.com/louisdalligos/DS-Suzuki/master/js/suzuki-gmap-pin.png")
             }
         },
         map: {
@@ -105,7 +105,6 @@ $(function() {
                 navigationControl: false,
                 streetViewControl: false
             }
-        },
-        key: 'AIzaSyBsAON98ndGW0tqEmULBRVhFKV3UmgjPZQ'
+        }
     });
 });
